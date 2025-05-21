@@ -45,8 +45,16 @@ fi
 # manually add your oh-my-zsh plugins here
 plugins=(
     "sudo"
-    # "git"                     # (default)
-    # "zsh-autosuggestions"     # (default)
-    # "zsh-syntax-highlighting" # (default)
+    "git"                     # (default)
+    "archlinux"
+    "alias-finder"
+    "autojump"
+    "colored-man-pages"
+    "command-not-found"
+    "dirhistory" 
     # "zsh-completions"         # (default)
 )
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
