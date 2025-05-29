@@ -52,7 +52,7 @@ plugins=(
     "colored-man-pages"
     "command-not-found"
     "dirhistory" 
-    # "zsh-completions"         # (default)
+    "aliases"    
 )
 zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
