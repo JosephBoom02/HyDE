@@ -1,0 +1,36 @@
+2025-05-18 19:24:15.289 [info] Extension host with pid 5118 started
+2025-05-18 19:24:15.356 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-05-18 19:24:15.401 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-05-18 19:24:15.404 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2025-05-18 19:24:15.405 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: true, activationEvent: '*'
+2025-05-18 19:24:15.493 [info] ExtensionService#_doActivateExtension tintinweb.vscode-inline-bookmarks, startup: true, activationEvent: '*'
+2025-05-18 19:24:15.505 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-05-18 19:24:15.548 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-05-18 19:24:15.607 [info] Eager extensions activated
+2025-05-18 19:24:15.623 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:15.625 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:15.641 [info] ExtensionService#_doActivateExtension Continue.continue, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:16.279 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2025-05-18 19:24:16.327 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:16.333 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:16.472 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:16.684 [error] Activating extension GitHub.vscode-pull-request-github failed due to an error:
+2025-05-18 19:24:16.684 [error] Error: Extension 'GitHub.vscode-pull-request-github' CANNOT use API proposal: diffCommand.
+Its package.json#enabledApiProposals-property declares:  but NOT diffCommand.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api GitHub.vscode-pull-request-github
+	at N (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:30038)
+	at Object.registerDiffInformationCommand (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:170:30738)
+	at i2 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2565:2021)
+	at K4 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:4466)
+	at e6 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:9016)
+	at async Y4 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:6018)
+	at async Nb.n (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:13382)
+	at async Nb.m (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:13345)
+	at async Nb.l (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:12801)
+2025-05-18 19:24:16.806 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker-italian, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:24:17.610 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-18 19:24:17.618 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-18 19:24:17.666 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-18 19:31:14.157 [info] ExtensionService#_doActivateExtension TheHyDEProject.wallbash, startup: false, activationEvent: 'onStartupFinished'
+2025-05-18 19:35:30.034 [info] Extension host terminating: renderer closed the MessagePort
+2025-05-18 19:35:30.050 [info] Extension host with pid 5118 exiting with code 0

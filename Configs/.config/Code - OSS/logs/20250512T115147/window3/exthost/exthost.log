@@ -1,0 +1,43 @@
+2025-05-12 11:51:49.721 [info] Extension host with pid 38644 started
+2025-05-12 11:51:50.050 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-05-12 11:51:50.210 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-05-12 11:51:50.212 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2025-05-12 11:51:50.214 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: true, activationEvent: '*'
+2025-05-12 11:51:50.307 [info] ExtensionService#_doActivateExtension tintinweb.vscode-inline-bookmarks, startup: true, activationEvent: '*'
+2025-05-12 11:51:50.325 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-05-12 11:51:50.386 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-05-12 11:51:50.477 [info] Eager extensions activated
+2025-05-12 11:51:50.506 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:50.509 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:50.538 [info] ExtensionService#_doActivateExtension Continue.continue, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:51.102 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2025-05-12 11:51:51.175 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:51.182 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:51.352 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:51.555 [error] Activating extension GitHub.vscode-pull-request-github failed due to an error:
+2025-05-12 11:51:51.555 [error] Error: Extension 'GitHub.vscode-pull-request-github' CANNOT use API proposal: diffCommand.
+Its package.json#enabledApiProposals-property declares:  but NOT diffCommand.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api GitHub.vscode-pull-request-github
+	at N (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:113:30038)
+	at Object.registerDiffInformationCommand (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:170:30738)
+	at i2 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2565:2021)
+	at K4 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:4466)
+	at e6 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:9016)
+	at async Y4 (/home/joseph/.vscode-oss/extensions/github.vscode-pull-request-github-0.110.0-universal/dist/extension.js:2907:6018)
+	at async Nb.n (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:13382)
+	at async Nb.m (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:13345)
+	at async Nb.l (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:119:12801)
+2025-05-12 11:51:52.554 [error] CodeExpectedError: Unable to write to User Settings because yaml.schemas is not a registered configuration.
+    at wpt.z (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:6793)
+    at wpt.F (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:9281)
+    at wpt.o (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:3874)
+    at Object.factory (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:3774)
+    at iC.j (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:30:75271)
+    at vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:30:75183
+    at new Promise (<anonymous>)
+    at iC.queue (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:30:75125)
+    at wpt.writeConfiguration (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:3743)
+    at TXs.Hb (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:3235:42634)
+2025-05-12 11:51:52.556 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker-italian, startup: false, activationEvent: 'onStartupFinished'
+2025-05-12 11:51:59.642 [info] Extension host terminating: renderer closed the MessagePort
+2025-05-12 11:51:59.659 [info] Extension host with pid 38644 exiting with code 0

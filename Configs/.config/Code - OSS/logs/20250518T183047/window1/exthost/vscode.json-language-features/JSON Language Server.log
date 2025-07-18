@@ -1,0 +1,10 @@
+2025-05-18 18:30:52.350 [info] cancelled
+2025-05-18 18:30:52.395 [info] cancelled
+2025-05-18 18:30:52.395 [info] cancelled
+2025-05-18 18:30:58.783 [info] read schema from vscode: vscode://schemas/color-theme
+2025-05-18 18:30:58.864 [info] read schema from vscode: vscode://schemas/token-styling
+2025-05-18 18:30:58.864 [info] read schema from vscode: vscode://schemas/textmate-colors
+2025-05-18 18:30:58.865 [info] read schema from vscode: vscode://schemas/workbench-colors
+2025-05-18 18:31:07.927 [info] schema change detected vscode://schemas/workbench-colors
+2025-05-18 18:31:07.937 [info] read schema from vscode: vscode://schemas/color-theme
+2025-05-18 18:31:07.938 [info] read schema from vscode: vscode://schemas/workbench-colors

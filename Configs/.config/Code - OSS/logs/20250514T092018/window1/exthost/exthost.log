@@ -1,0 +1,17 @@
+2025-05-14 09:20:19.812 [info] Extension host with pid 362395 started
+2025-05-14 09:20:19.885 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-05-14 09:20:19.907 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-14 09:20:19.917 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-14 09:20:19.992 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-05-14 09:20:20.316 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-05-14 09:20:20.318 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2025-05-14 09:20:20.319 [info] ExtensionService#_doActivateExtension Shan.code-settings-sync, startup: true, activationEvent: '*'
+2025-05-14 09:20:20.397 [info] ExtensionService#_doActivateExtension tintinweb.vscode-inline-bookmarks, startup: true, activationEvent: '*'
+2025-05-14 09:20:20.418 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-05-14 09:20:20.462 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-05-14 09:20:20.555 [info] Eager extensions activated
+2025-05-14 09:20:20.557 [info] Extension host terminating: renderer closed the MessagePort
+2025-05-14 09:20:20.565 [warning] Canceled
+2025-05-14 09:20:20.565 [warning] Canceled
+2025-05-14 09:20:20.565 [warning] Canceled
+2025-05-14 09:20:20.584 [info] Extension host with pid 362395 exiting with code 0
