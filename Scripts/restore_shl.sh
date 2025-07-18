@@ -11,6 +11,8 @@ if ! source "${scrDir}/global_fn.sh"; then
     exit 1
 fi
 
+flg_DryRun=${flg_DryRun:-0}
+
 # shellcheck disable=SC2154
 if chk_list "myShell" "${shlList[@]}"; then
     print_log -sec "SHELL" -stat "detected" "${myShell}"
@@ -21,24 +23,27 @@ fi
 
 # add zsh plugins
 if pkg_installed zsh; then
+    prompt_timer 120 "Pre install zsh plugins using oh-my-zsh? [y/n] | q to quit "
 
-    if ! pkg_installed oh-my-zsh-git; then
-        if [[ ! -e "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]]; then
-            print_log -sec "SHELL" -stat "cloning" "oh-my-zsh"
-            if ! sh -c "$(curl -fsSL https://install.ohmyz.sh/)" "" --unattended --keep-zshrc; then
-                print_log -err "oh-my-zsh update failed..." "Please resolve this issue manually LATER ..."
-                print_log -warn "Continuing" "with existing oh-my-zsh..."
-                exit 0
+    if [ "${PROMPT_INPUT}" == "y" ]; then
+        if ! pkg_installed oh-my-zsh-git; then
+            if [[ ! -e "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]]; then
+                print_log -sec "SHELL" -stat "cloning" "oh-my-zsh"
+                [ ${flg_DryRun} -eq 1 ] || if ! sh -c "$(curl -fsSL https://install.ohmyz.sh/)" "" --unattended --keep-zshrc; then
+                    print_log -err "oh-my-zsh update failed..." "Please resolve this issue manually LATER ..."
+                    print_log -warn "Continuing" "with existing oh-my-zsh..."
+                    exit 0
+                fi
+
+            else
+                print_log -sec "SHELL" -stat "updating" "oh-my-zsh"
+                zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
             fi
-
-        else
-            print_log -sec "SHELL" -stat "updating" "oh-my-zsh"
-            zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
         fi
     fi
 
     #? Optional: oh-my-zsh
-    if pkg_installed oh-my-zsh-git || [[ -f "${HOME}/.oh-my-zsh/oh-my-zsh.sh" ]]; then
+    if (pkg_installed oh-my-zsh-git || [[ -f "${HOME}/.oh-my-zsh/oh-my-zsh.sh" ]]) && [ ${flg_DryRun} -ne 1 ]; then
         zsh_paths=(
             "$HOME/.oh-my-zsh"
             "/usr/local/share/oh-my-zsh"
@@ -72,13 +77,24 @@ if pkg_installed zsh; then
         # update plugin array in zshrc
         print_log -sec "SHELL" -stat "installing" "plugins (${w_plugin} )"
         sed -i "/^hyde_plugins=/c\hyde_plugins=(${w_plugin} )${Fix_Completion}" "${Zsh_rc}"
+    else
+        if [ "${flg_DryRun}" -eq "1" ]; then
+            while read -r r_plugin; do
+                z_plugin=$(awk -F '/' '{print $NF}' <<<"${r_plugin}")
+                [ -z "${z_plugin}" ] || w_plugin+=" ${z_plugin}"
+            done < <(cut -d '#' -f 1 "${scrDir}/restore_zsh.lst" | sed 's/ //g')
+            print_log -sec "SHELL" -stat "installing" "plugins (${w_plugin} )"
+        else
+            print_log -sec "SHELL" -err "error" "oh-my-zsh not installed, skipping plugin installation..."
+        fi
     fi
+
 fi
 
 # set shell
 if [[ "$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')" != "${myShell}" ]]; then
     print_log -sec "SHELL" -stat "change" "shell to ${myShell}..."
-    chsh -s "$(which "${myShell}")"
+    [ ${flg_DryRun} -eq 1 ] || chsh -s "$(which "${myShell}")"
 else
     print_log -sec "SHELL" -stat "exist" "${myShell} is already set as shell..."
 fi

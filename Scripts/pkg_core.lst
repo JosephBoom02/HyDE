@@ -14,6 +14,7 @@ bluez                                                  # bluetooth protocol stac
 bluez-utils                                            # bluetooth utility cli
 blueman                                                # bluetooth manager gui
 brightnessctl                                          # screen brightness control
+playerctl                                              # media controls
 udiskie                                                # manage removable media
 
 # --------------------------------------------------- // Display Manager
@@ -35,6 +36,7 @@ hyprpicker                                             # color picker
 slurp                                                  # region select for screenshot/screenshare
 satty                                                  # Modern Screenshot Annotation
 cliphist                                               # clipboard manager
+wl-clip-persist                                        # Keep Wayland clipboard even after programs close (avoids crashes)
 hyprsunset                                             # blue light filter
 
 # --------------------------------------------------- // Dependencies
@@ -73,12 +75,11 @@ nwg-displays                                           # monitor management util
 fzf                                                    # Command-line fuzzy finder
 
 # --------------------------------------------------- // Shell
-eza|zsh                                                # file lister for zsh
-zsh-theme-powerlevel10k-git|zsh                        # Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 starship|zsh                                           # customizable shell prompt written in Rust
 # starship-git                                         # The cross-shell prompt for astronauts  
 eza|fish                                               # file lister for fish
 starship|fish                                          # customizable shell prompt
+duf|fish                                               # prettier version of df for fish
 fastfetch                                              # system information fetch tool
 
 # --------------------------------------------------- // HyDE

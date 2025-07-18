@@ -224,7 +224,7 @@ get_themes() {
         [ -f "${thmDir}/.sort" ] && thmSortS+=("$(head -1 "${thmDir}/.sort")") || thmSortS+=("0")
         thmWallS+=("${realWallPath}")
         thmListS+=("${thmDir##*/}") # Use this instead of basename
-    done < <(find "${HYDE_CONFIG_HOME}/themes" -mindepth 1 -maxdepth 1 -type d)
+    done < <(find "${HYDE_CONFIG_HOME}/themes" -follow -mindepth 1 -maxdepth 1 -type d)
 
     while IFS='|' read -r sort theme wall; do
         thmSort+=("${sort}")
@@ -439,7 +439,7 @@ get_rofi_pos() {
 #? handle pasting
 paste_string() {
     if ! command -v wtype >/dev/null; then exit 0; fi
-    if [ -t 0 ] || [ -t 1 ]; then return 0; fi
+    if [ -t 1 ]; then return 0; fi
     ignore_paste_file="$HYDE_STATE_HOME/ignore.paste"
 
     if [[ ! -e "${ignore_paste_file}" ]]; then
