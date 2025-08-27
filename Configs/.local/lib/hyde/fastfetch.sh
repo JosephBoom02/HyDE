@@ -29,6 +29,7 @@ USAGE
 # Set the variables
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
 iconDir="${XDG_DATA_HOME:-$HOME/.local/share}/icons"
+cacheDir="${XDG_CACHE_HOME:-$HOME/.cache}/hyde"
 image_dirs=()
 hyde_distro_logo=${iconDir}/Wallbash-Icon/distro/$LOGO
 
@@ -82,10 +83,10 @@ HELP
     for arg in "$@"; do
       case $arg in
       --quad)
-        image_dirs+=("$HYDE_CACHE_HOME/wall.quad")
+        image_dirs+=("$cacheDir/wall.quad")
         ;;
       --sqre)
-        image_dirs+=("$HYDE_CACHE_HOME/wall.sqre")
+        image_dirs+=("$cacheDir/wall.sqre")
         ;;
       --prof)
         [ -f "$HOME/.face.icon" ] && image_dirs+=("$HOME/.face.icon")
