@@ -43,7 +43,7 @@ logo) # eats around 13 ms
         image_dirs+=("${confDir}/hyde/themes/${HYDE_THEME}/logo")
       fi
       # [ -d "$HYDE_CACHE_HOME" ] && image_dirs+=("$HYDE_CACHE_HOME")
-      [ -f "$hyde_distro_logo" ] && echo "${hyde_distro_logo}"
+      # [ -f "$hyde_distro_logo" ] && echo "${hyde_distro_logo}"
       image_dirs+=("$HYDE_CACHE_HOME/wall.quad")
       image_dirs+=("$HYDE_CACHE_HOME/wall.sqre")
       [ -f "$HOME/.face.icon" ] && image_dirs+=("$HOME/.face.icon")
