@@ -457,6 +457,19 @@
                 }
             }
         },
+        "screenshot.ocr": {
+            "description": "OCR configuration.",
+            "type": "object",
+            "properties": {
+                "tesseract_languages": {
+                    "default": [
+                        "eng"
+                    ],
+                    "description": "Place desired languages to use for text recognition. To see installed languages run `tesseract --list-langs`.",
+                    "type": "array"
+                }
+            }
+        },
         "rofi.bookmark": {
             "description": "Bookmark configuration.",
             "type": "object",
@@ -734,9 +747,6 @@
             "type": "object",
             "properties": {
                 "sanitize": {
-                    "default": [
-                        ".*rgba\\(.*,.*,.*,.*\\)"
-                    ],
                     "description": "List of regex to sanitize in the theme.config.",
                     "type": "array",
                     "items": {
@@ -940,7 +950,75 @@
                 }
             }
         },
-        "hyprland_start": {
+        "qt5": {
+            "description": "Qt5 configuration.",
+            "type": "object",
+            "properties": {
+                "font": {
+                    "default": "Canterell",
+                    "description": "Qt5 font.",
+                    "type": "string"
+                },
+                "font_size": {
+                    "default": 10,
+                    "description": "Qt5 font size.",
+                    "type": "integer"
+                },
+                "monospace_font": {
+                    "default": "CaskaydiaCove Nerd Font Mono",
+                    "description": "Qt5 monospace font.",
+                    "type": "string"
+                },
+                "monospace_font_size": {
+                    "default": 9,
+                    "description": "Qt5 monospace font size.",
+                    "type": "integer"
+                }
+            }
+        },
+        "qt6": {
+            "description": "Qt6 configuration.",
+            "type": "object",
+            "properties": {
+                "font": {
+                    "default": "Canterell",
+                    "description": "Qt6 font.",
+                    "type": "string"
+                },
+                "font_size": {
+                    "default": 10,
+                    "description": "Qt6 font size.",
+                    "type": "integer"
+                },
+                "monospace_font": {
+                    "default": "CaskaydiaCove Nerd Font Mono",
+                    "description": "Qt6 monospace font.",
+                    "type": "string"
+                },
+                "monospace_font_size": {
+                    "default": 9,
+                    "description": "Qt6 monospace font size.",
+                    "type": "integer"
+                }
+            }
+        },
+        "gtk3": {
+            "description": "GTK3 configuration.",
+            "type": "object",
+            "properties": {
+                "font": {
+                    "default": "Canterell",
+                    "description": "GTK3 font.",
+                    "type": "string"
+                },
+                "font_size": {
+                    "default": 10,
+                    "description": "GTK3 font size.",
+                    "type": "integer"
+                }
+            }
+        },
+        "hyprland-start": {
             "description": "Hyprland start configuration.",
             "type": "object",
             "properties": {
