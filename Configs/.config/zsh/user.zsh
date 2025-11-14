@@ -27,4 +27,5 @@ if [[ ${HYDE_ZSH_NO_PLUGINS} != "1" ]]; then
         "sudo"
     )
 fi
-alias prova=prova
+# enable zoxide shortcut
+eval "$(zoxide init zsh)"
