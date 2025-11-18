@@ -24,7 +24,7 @@ if [[ ${HYDE_ZSH_NO_PLUGINS} != "1" ]]; then
     #  OMZ Plugins 
     # manually add your oh-my-zsh plugins here
     plugins=(
-        "sudo"
+        
     )
 fi
 # enable zoxide shortcut
